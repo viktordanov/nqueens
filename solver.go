@@ -95,11 +95,7 @@ func (c *Chessboard) Solve(depth int) bool {
 	for i := 0; i < len(c.Board); i++ {
 		if c.CheckPosition(depth, i) {
 			c.Board[depth][i] = true
-
 			if c.Solve(depth + 1) {
-				if depth == 0 {
-
-				}
 				return true
 			}
 			c.Board[depth][i] = false
